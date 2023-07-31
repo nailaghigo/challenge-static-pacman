@@ -1,11 +1,15 @@
 var pacman;
 var ghost;
-var pacmanX = 0, pacmanY = 0, step= 3;
+var pacmanX, pacmanY, step= 3;
 
 
 window.addEventListener('DOMContentLoaded', function(){
   pacman = document.getElementById('pacman');
   ghost = document.getElementById('ghost');
+
+  var pacmanInitialPosition = pacman.getBoundingClientRect()
+  pacmanX = pacmanInitialPosition.x
+  pacmanY = pacmanInitialPosition.y
 
   startGame(pacman)
 });
